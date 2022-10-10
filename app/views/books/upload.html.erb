@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <style type="text/css">
+      #mynetwork {
+        width: 1000px;
+        height: 700px;
+        border: 1px solid lightgray;
+      }
+    </style>
+
+      <div class="bg-gray-300">
+  <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <span class="block text-indigo-600">My Book Network</span>
+      <span class="block text-indigo-300 text-xl"> Using <a class="text-indigo-400"href = "https://github.com/visjs/vis-network">vis-network </a></span>
+    </h2>
+    
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Add New Data</a>
+      </div>
+      <div class="ml-3 inline-flex rounded-md shadow">
+        <a href="#" class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50">Create Commuinty</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </head>
+
+
+
+  <body>
+
+    <div class="flex justify-center bg-gray-100">
+        <div  id="mynetwork"></div>
+        <script type="text/javascript">
+
+        var nodes = new vis.DataSet([
+            { id: 1, label: "USER1" , group: 2},
+            { id: 2, label: "USER2" , group: 1},
+            { id: 3, label: "USER3" , group: 1},
+            { id: 4, label: "USER4" , group: 1},
+            { id: 5, label: "USER5" , group: 1},
+
+            { id: 102, label: "新訳データ構造と\nネットワークアルゴリズム" , group: 3},
+            { id: 103, label: "プログラミング言語Ruby" , group: 3},
+            { id: 104, label: "グラフ・ネットワーク・組合せ論" , group: 3},
+            { id: 105, label: "基本統計学" , group: 3},
+            { id: 106, label: "プロセッサを支える技術" , group: 3},
+            { id: 107, label: "例解と演習離散数学 " , group: 3},
+            { id: 108, label: "社会科学のためのデータ分析入門" , group: 3},
+            { id: 109, label: "プログラミングのための確率統計" , group: 3},
+
+            { id: 110, label: "コンピュータアーキテクチャ" , group: 3},
+            { id: 111, label: "データベースシステム" , group: 3},
+            { id: 112, label: "わかりやすいディジタル信号処理 " , group: 3},
+            { id: 113, label: "構造化コンピュータ構成" , group: 3},
+            { id: 114, label: "オークション理論の基礎 " , group: 3},
+        ]);
+
+        // create an array with edges
+        var edges = new vis.DataSet([
+            { from: 1, to: 102 },
+            { from: 1, to: 103 },
+            { from: 1, to: 104 },
+            { from: 1, to: 105 },
+            { from: 2, to: 102 },
+            { from: 2, to: 105 },
+            { from: 2, to: 107 },
+            { from: 3, to: 106 },
+            { from: 3, to: 108 },
+            { from: 3, to: 109 },
+            { from: 3, to: 105 },
+
+            { from: 4, to: 110 },
+            { from: 4, to: 111 },
+            { from: 4, to: 112 },
+            { from: 4, to: 113 },
+            { from: 4, to: 105 },
+
+            { from: 5, to: 114 },
+            { from: 1, to: 114 },
+        ]);
+
+        // create a network
+        var container = document.getElementById("mynetwork");
+        var data = {
+            nodes: nodes,
+            edges: edges,
+        };
+        var options = {};
+        var network = new vis.Network(container, data, options);
+        </script>
+
+        
+
+        </div>
+        <span class="flex justify-center block text-indigo-800">ネットワークはマウスで操作可能です</span>
+  </body>
+</html>
