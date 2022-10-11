@@ -9,7 +9,7 @@
     "@tailwindcss/postcss7-compat": "^2.2.17",
     "autoprefixer": "^9",
     "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tailwindcss": "3.1.8",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
