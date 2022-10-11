@@ -1,24 +1,4 @@
-# README
+# Book Analysis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+九州大学アイディアソンで提案した「九大生マッチングアプリ」,
+借りた本の類似度を可視化するアプリを作成中です．
